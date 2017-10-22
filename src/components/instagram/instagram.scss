@@ -1,0 +1,79 @@
+.instagram {
+	background-color: $red;
+	color: white;
+	text-align: center;
+	padding: 28px 0 45px;
+
+	@include media(w1024) {
+		padding: 30px 0 10px;
+	}
+
+	&__title {
+		margin-bottom: 0.2em;
+
+		span {
+			font-weight: 200;
+		}
+	}
+
+	&__photo {
+		display: flex;
+		justify-content: space-between;
+
+		@include media(w1024) {
+			flex-flow: wrap;
+			justify-content: space-around;
+		}
+
+		@include media(w768) {
+			justify-content: space-between;
+		}
+	}
+
+	&__photo-item {
+		display: block;
+		background-color: $brown;
+		color: black;
+		font-family: "Verdana", Arial, Helvetica, sans-serif;
+		font-size: 0.95rem;
+		line-height: 1.2;
+		text-align: left;
+		text-decoration: none;
+		width: 23%;
+
+		@include media(w1024) {
+			margin-bottom: 20px;
+			width: 42%;
+		}
+
+		@include media(w768) {
+			width: 48%;
+		}
+	}
+
+	&__photo-img {
+		background-image: url("../img/pizza-img.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		display: block;
+		height: 236px;
+
+		@include media(w1024) {
+			height: 40vw;
+		}
+
+		@include media(w768) {
+			height: 45vw;
+		}
+	}
+
+	&__photo-text {
+		display: block;
+		padding: 10px 10px 15px 15px;
+
+		@include media(w768) {
+			padding: 10px 5px;
+		}
+	}
+}

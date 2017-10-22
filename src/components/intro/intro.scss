@@ -1,0 +1,144 @@
+$intro-content-offset-left-pc: 41%;
+$intro-content-offset-left-tablet: 30%;
+$intro-content-offset-left-tablet-s: 25%;
+
+.intro {
+	background-image: url("../img/bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	overflow: hidden;
+
+	&__content {
+		padding: 35px 0 10px $intro-content-offset-left-pc;
+		position: relative;
+
+		@include media(w1100) {
+			padding: 35px 0 10px $intro-content-offset-left-tablet;
+		}
+
+		@include media(w1024) {
+			padding: 35px 0 10px $intro-content-offset-left-tablet-s;
+		}
+
+		@include media(w768) {
+			padding: 25px 0 40% 0;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		
+		&_pizza {
+			right: calc(100% - #{$intro-content-offset-left-pc} + 5px);
+			bottom: -28%;
+			max-width: 673px;
+
+			@include media(w1100) {
+				right: calc(100% - #{$intro-content-offset-left-tablet} - 20px);
+				bottom: -55%;
+			}
+
+			@include media(w1024) {
+				transform: translateY(50%);
+				right: calc(100% - #{$intro-content-offset-left-tablet-s} - 30px);
+				bottom: 0;
+			}
+
+			@include media(w768) {
+				transform: translateY(50%);
+				right: 40%;
+				bottom: 0;
+				width: 90%;
+			}
+		}
+
+		&_glasses {
+			top: 3%;
+			right: 80%;
+
+			@include media(w1100) {
+				right: 90%;
+			}
+
+			@include media(w768) {
+				display: none;
+			}
+		}
+
+		&_pepsi {
+			top: 11%;
+			right: 61%;
+			max-width: 197px;
+
+			@include media(w1100) {
+				top: 15%;
+				right: 70%;
+			}
+			
+			@include media(w1024) {
+				top: 20%;
+				right: 73%;
+			}
+
+			@include media(w768) {
+				transform: translateY(-20%);
+				top: auto;
+				right: 5%;
+				bottom: 0;
+				width: 30%;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 0.8em;
+	}
+
+	&__list {
+		line-height: 1.4;
+	}
+
+	&__list-item {
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-size: 43px;
+		padding-left: 65px;
+
+		&:not(:last-child) {
+			margin-bottom: 42px;
+
+			@include media(w1024) {
+				margin-bottom: 30px;
+			}
+		}
+
+		&_pizza {
+			background-image: url("../img/icon-pizza.png");
+		}
+
+		&_time {
+			background-image: url("../img/icon-time.png");
+		}
+
+		&_heart {
+			background-image: url("../img/icon-heart.png");
+		}
+
+		@include media(w768) {
+			background-position: left top 4px;
+			background-size: 30px;
+			padding-left: 45px;
+		}
+	}
+
+	&__list-title {
+		margin-bottom: 0.4em;
+	}
+	
+	&__list-text {
+		color: black;
+		font-family: "Verdana", Arial, Helvetica, sans-serif;
+	}
+}

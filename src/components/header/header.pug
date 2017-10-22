@@ -1,0 +1,7 @@
+- var headerOptions = {place:"header", social: ["vk", "inst"]};
+
+mixin header()
+	div.header&attributes(attributes)
+		+container()
+			+actions(headerOptions)
+		block

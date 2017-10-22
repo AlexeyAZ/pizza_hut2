@@ -1,0 +1,20 @@
+mixin instagram()
+	div.instagram&attributes(attributes)
+		+container()
+			h2.instagram__title
+				|PIZZA HUT
+				|
+				span.
+					INSTAGRAM
+			h2.instagram__title
+				span
+					|@
+					=inst[activeCity]
+			div#instafeed.instagram__photo
+				//- - for (var i = 0; i < 4; i++) {
+				//- 	div.instagram__photo-item
+				//- 		div.instagram__photo-img
+				//- 		div.instagram__photo-text.
+				//- 			По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей нед.
+				//- - }
+		block

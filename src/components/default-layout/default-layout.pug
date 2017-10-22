@@ -1,0 +1,33 @@
+doctype html
+
+include ../container/container
+include ../actions/actions
+include ../header/header
+include ../footer/footer
+
+- var title = 'Project title';
+- var logoLink = {nn: "https://nnovgorod.pizzahut.ru", kazan: "https://kazan.pizzahut.ru"};
+- var inst = {nn: "pizzahutnnovgorod", kazan: "pizzahutkazan"};
+- var social = {nn: [{name: "vk", link: "https://vk.com/pizzahutnnovgorod"}, {name: "inst", link: "https://www.instagram.com/pizzahutnnovgorod/"}], kazan: [{name: "vk", link: "https://vk.com/pizzahutkazan"}, {name: "inst", link: "https://www.instagram.com/pizzahutkazan/"}]};
+
+block vars
+- var activeCity = "kazan";
+- var city = {nn: {title: "PIZZA HUT EXPRESS. ТРК «Небо»", adress: "Нижний Новгород, ул. Большая Покровская, д. 82, 5 этаж"}, kazan: {title: "Pizza Hut Express в ТРК «Тандем»", adress: "Казань, проспект Ибрагимова, д. 56, 3 этаж"}};
+	
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(name="description", content="")
+		meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
+		title #{title}
+		link(rel="icon" type="image/png" href="favicon.png" sizes="16x16")
+		link(rel="stylesheet", href="styles/vendor.css?v=" + Date.now())
+		link(rel="stylesheet", href="styles/main.css?v=" + Date.now())
+	body(data-city=activeCity)
+		include ../svg/svg
+		+header()
+		block content
+		+footer()
+		script(defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9BGChoU3aWOKEhpXa1LKQ7xJmI_8bd6k")
+		script(defer src="scripts/vendor.js?v=" + Date.now())
+		script(defer src="scripts/app.js?v=" + Date.now())

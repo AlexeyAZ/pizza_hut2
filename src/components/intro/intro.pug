@@ -1,0 +1,17 @@
+mixin intro(list)
+	div.intro&attributes(attributes)
+		+container()
+			div.intro__content
+				img(src="img/pizza.png" alt="").intro__img.intro__img_pizza
+				img(src="img/glasses.png" alt="").intro__img.intro__img_glasses
+				img(src="img/pepsi.png" alt="").intro__img.intro__img_pepsi
+				h1.intro__title.
+					PIZZA HUT EXPRESS - ЭТО
+				ul.intro__list
+					each item in list
+						li(class="intro__list-item_" + item.name).intro__list-item
+							h3.intro__list-title
+								=item.title
+							p.intro__list-text
+								=item.text
+		block

@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    
+    @include media(w1100) {
+        font-size: 14px;
+    }
+
+    @include media(w768) {
+        font-size: 12px;
+    }
+}
+
+body {
+    font-family: "AFuturica", Arial, Helvetica, sans-serif;
+    position: relative;
+    line-height: 1.5;
+    min-width: $min-width;
+}

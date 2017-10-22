@@ -1,0 +1,10 @@
+mixin map()
+	div.map&attributes(attributes)
+		+container()
+			h2.map__title
+				=city[activeCity].title
+			h4.map__subtitle
+				=city[activeCity].adress
+			div.map__block-wrap
+				div.map__block
+		block

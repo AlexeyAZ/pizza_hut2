@@ -1,0 +1,12 @@
+mixin actions(options)
+	div.actions&attributes(attributes)
+		div.actions__logo
+			a(href=logoLink[activeCity]).actions__logo-link
+				img(src="img/" + options.place + "-logo.png").actions__logo-img
+		div.actions__social
+			ul.actions__social-list
+				each item in social[activeCity]
+					li(class="actions__social-item_" + options.place).actions__social-item
+						a(href=item.link class="actions__social-link_" + options.place target="blank").actions__social-link
+							img(src="img/" + options.place + "-" + item.name + ".png").actions__social-img
+		block

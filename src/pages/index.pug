@@ -1,0 +1,16 @@
+extends ../components/default-layout/default-layout
+
+block vars
+	include ../components/intro/intro
+	include ../components/map/map
+	include ../components/instagram/instagram
+
+
+	- var title = 'PIZZA HUT';
+	
+	- var introList = [{name: "pizza", title: "Настоящий вкус", text: "Каждый день наши повара готовят свежее крафтовое тесто по фирменному рецепту Pizza Hut, которому мы следуем уже более полувека."}, {name: "time", title: "СКОРОСТЬ", text: "В ресторанах Pizza Hut Express мы готовим пиццу для каждого гостя за 5 минут или бесплатно. Всегда."}, {name: "heart", title: "Бесконечная любовь к пицце", text: "Наша любовь – воздушное крафтовое тесто с хрустящей корочкой. Наша страсть – спелые томаты, нежная моцарелла и пикантные колбаски пепперони. Каждый рецепт пиццы от Pizza Hut тщательно проработан и доведен до совершенства нашими шеф-поварами. Потому что пицца – это искусство."}];
+
+block content
+	+intro(introList)
+	+map(city, activeCity)
+	+instagram()
